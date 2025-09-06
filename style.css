@@ -1,11 +1,7 @@
 /* for nav and body font style */
 body {
   font-family: 'Poppins', sans-serif;
-  overflow-x: hidden;
-}
-
-section {
-  padding: 60px 0;
+    overflow-x: hidden;/* avoid overflow */
 }
 
 .navbar-brand {
@@ -15,7 +11,7 @@ section {
 
 /* for hero section background */
 .hero-section {
-  background-image: url('./assets/Untitled\ design.png');
+  background-image: url('./assets/Untitled design.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -28,7 +24,6 @@ section {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  /* background-color: rgba(0, 0, 0, 0.5);  */
   z-index: 1;
 } 
 
@@ -39,29 +34,23 @@ section {
 
 
 /* about section */
-/* About Section Styling */
 #about {
-  background-color: #ffffff;
-  color: #e5eaef;
   padding: 60px 0;
-}
-#about {
   background-image: url('./assets/6184604.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
   position: relative;
-}
- #about {
-  content: "";
-  width: 100%; height: 100%;
-  /* background-color: rgba(0, 0, 0, 0.5);  */
-  z-index: 1;
-} 
- #about {
-  position: relative;
   z-index: 2;
+}
+
+#about::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 1;
 }
 
 #about h2 {
@@ -120,6 +109,7 @@ section {
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+   z-index: 2;
 } 
 
 #about img:hover {
@@ -143,34 +133,55 @@ section {
     transform: translateY(0);
   }
 }
+/* for phone */
+@media (max-width: 768px) {
+  #about .col-md-6 {
+    padding: 10px;
+    text-align: center;
+  }
 
+  #about img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    left: 0;
+  }
+
+  .hero-section {
+    background-position: center center;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+}
 
 
 /* project section */
 
 #projects {
-  background-color: #ffffff;
-  color: #e5eaef;
   padding: 60px 0;
-}
-#projects {
   background-image: url('./assets/6184604.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
   position: relative;
-}
- #projects {
-  content: "";
-  width: 100%; height: 100%;
-  /* background-color: rgba(0, 0, 0, 0.5);  */
-  z-index: 1;
-} 
- #projects {
-  position: relative;
   z-index: 2;
 }
+
+#projects::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 1;
+}
+
 #projects h2{
   position: relative;
   top: 20px;
@@ -195,24 +206,24 @@ section {
 /* contact section  */
 
 #contact {
+  padding: 60px 0;
   background-image: url('./assets/6184604.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
   position: relative;
-  padding: 60px 0;
-}
- #contact {
-  content: "";
-  width: 100%; height: 100%;
-  /* background-color: rgba(0, 0, 0, 0.5);  */
-  z-index: 1;
-} 
- #contact {
-  position: relative;
   z-index: 2;
 }
+
+#contact::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 1;
+}
+
 #contact h2{
   position: relative;
   top: 20px;
@@ -229,6 +240,7 @@ section {
 /* 
 for text in web pAGE  */
 section {
+  padding: 60px 0;
   color: #e0e0e0; /* Light grey text for readability */
 }
 
@@ -277,5 +289,4 @@ h1, h2 {
 .scroll-animate.visible {
   opacity: 1;
   transform: translateY(0);
-
 }
