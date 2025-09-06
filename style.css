@@ -25,6 +25,7 @@ body {
   top: 0; left: 0;
   width: 100%; height: 100%;
   z-index: 1;
+  pointer-events: none;
 } 
 
  .hero-section .container {
@@ -51,6 +52,7 @@ body {
   top: 0; left: 0;
   width: 100%; height: 100%;
   z-index: 1;
+  pointer-events: none;
 }
 
 #about h2 {
@@ -180,6 +182,7 @@ body {
   top: 0; left: 0;
   width: 100%; height: 100%;
   z-index: 1;
+  pointer-events: none;
 }
 
 #projects h2{
@@ -222,15 +225,17 @@ body {
   top: 0; left: 0;
   width: 100%; height: 100%;
   z-index: 1;
+  pointer-events: none;
 }
 
 #contact h2 {
-  margin-top: 35px;
+  margin-top: 15px;
   margin-bottom: 30px;
 }
 
 #contact form {
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 #contact a {
@@ -291,7 +296,4 @@ h1, h2 {
   opacity: 1;
   transform: translateY(0);
 }
-
-
-
 
